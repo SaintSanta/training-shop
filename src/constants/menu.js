@@ -1,30 +1,37 @@
 export const MENU = [
     {
         id: '1',
-        name: 'About Us'
+        name: 'About Us',
+        path: 'about Us'
     },
     {
         id: '2',
-        name: 'Women'
+        name: 'Women',
+        path: 'women'
     },
     {
         id: '3',
-        name: 'Men'
+        name: 'Men',
+        path: 'men'
     },
     {
         id: '4',
-        name: 'Beauty'
+        name: 'Beauty',
+        path: 'beauty'
     },
     {
         id: '5',
-        name: 'Accessories'
+        name: 'Accessories',
+        path: 'accessories'
     },
     {
         id: '6',
-        name: 'Blog'
+        name: 'Blog',
+        path: 'blog'
     },
     {
         id: '7',
-        name: 'Contact'
+        name: 'Contact',
+        path: 'contact'
     },
 ]
