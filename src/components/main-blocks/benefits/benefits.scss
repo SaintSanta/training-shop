@@ -1,0 +1,13 @@
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0;
+  border-bottom: 2px solid #f8f8f8;
+}
+
+@media all and (max-width: 650px) {
+  .benefits {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}

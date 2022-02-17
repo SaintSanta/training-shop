@@ -1,0 +1,39 @@
+.footer-nav {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  .footer-nav-item {
+    width: 100%;
+
+    .link {
+      cursor: pointer;
+      line-height: 34px;
+      color: #414141;
+      display: flex;
+
+      img {
+        padding-right: 8px;
+      }
+
+      .mail-text {
+        text-decoration: underline;
+      }
+    }
+
+    .link:first-child {
+      font-weight: 600;
+      line-height: 13px;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+  }
+}

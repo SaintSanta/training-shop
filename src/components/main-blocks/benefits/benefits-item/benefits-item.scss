@@ -1,0 +1,13 @@
+.benefits-item {
+  display: flex;
+
+  .benefits-item-img {
+    padding-right: 8px;
+  }
+
+  .benefits-item-description {
+    .title {
+      font-weight: 600;
+    }
+  }
+}
