@@ -1,0 +1,17 @@
+.header-icons-nav {
+  display: flex;
+  column-gap: 24px;
+
+  .header-icons-nav-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media all and (max-width: 470px) {
+  .header-icons-nav-item {
+    .header-icons-nav-item-img {
+      width: 80%;
+    }
+  }
+}
