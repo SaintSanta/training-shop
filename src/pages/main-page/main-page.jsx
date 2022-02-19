@@ -1,3 +1,4 @@
+import React from 'react';
 import { MainHeader } from '../../components/main-blocks/main-header';
 import { Benefits } from '../../components/main-blocks/benefits';
 import { Clothes } from '../../components/main-blocks/clothes';

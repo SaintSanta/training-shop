@@ -1,3 +1,4 @@
+import React from 'react';
 import { SocialNetwork } from '../../social-network/social-network';
 
 import './footer-subscriber.scss';

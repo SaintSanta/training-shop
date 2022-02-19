@@ -1,3 +1,4 @@
+import React from 'react';
 import { FooterSubscriber } from './footer-subscriber';
 import { FooterTerminal } from './footer-terminal';
 import { FooterNav } from './footer-nav';

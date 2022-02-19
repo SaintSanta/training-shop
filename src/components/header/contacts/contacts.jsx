@@ -1,3 +1,4 @@
+import React from 'react';
 import { CONTACTS } from '../../../constants/contacts';
 
 import './contacts.scss';

@@ -1,3 +1,4 @@
+import React from 'react';
 import stripe from './assets/stripe.svg';
 import aes from './assets/aes.svg';
 import paypal from './assets/paypal.svg';

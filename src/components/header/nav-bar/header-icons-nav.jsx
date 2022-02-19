@@ -1,3 +1,4 @@
+import React from 'react';
 import { Cart } from '../../cart/cart';
 
 import { NAV_BAR_ICONS } from '../../../constants/nav-bar-icons';
