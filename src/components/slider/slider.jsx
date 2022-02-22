@@ -1,39 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
 
-import arrPrev from './assets/arr-prev.svg';
-import arrNext from './assets/arr-next.svg';
+import 'swiper/css';
+import 'swiper/css/bundle';
 
 import './slider.scss';
 
 export const Slider = ({ array }) => {
   return (
-    <div className='slider'>
-      {array.map(({ id, imageSrc, title, text, nameImg }) => (
-        <div key={id} className='slider-block'>
-          <img src={arrPrev} alt='arr-prev' className='arr-prev-img' />
-          <img src={arrNext} alt='arr-next' className='arr-next-img' />
-          <img src={imageSrc} alt={nameImg} className='slider-img' />
-          {title && text && (
+    <div className='slider' data-test-id='main-slider'>
+
+      <Swiper modules={[Navigation]} navigation slidesPerView={1} className="slide-block">
+        {array.map((item) => (
+          <SwiperSlide key={item.id}>
+            <img src={item.imageSrc} alt='img' className='sliderImg' />
             <div className='btn'>
-              <div className='title'>{title}</div>
-              <div className='text'>{text}</div>
+              <div className='title'>{item.title}</div>
+              <div className='text'>{item.text}</div>
             </div>
-          )}
-        </div>
-      ))}
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
     </div>
   );
 };
 
-Slider.propTypes = {
-  array: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      imageSrc: PropTypes.string,
-      title: PropTypes.string,
-      text: PropTypes.string,
-      nameImg: PropTypes.string,
-    })
-  ).isRequired,
-};

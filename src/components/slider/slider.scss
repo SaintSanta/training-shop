@@ -2,11 +2,41 @@
   .side-block {
     display: flex;
     flex-direction: column;
-    row-gap: 14px;
   }
 }
 
-.slider-block {
+.swiper-pagination {
+  .swiper-pagination-bullet {
+    background: #121212;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.swiper {
+  .swiper-button-prev,
+  .swiper-button-next {
+  
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  .swiper-button-next{
+    background-image: url(./assets/arr-next.svg);
+  }
+  .swiper-button-prev{
+    background-image: url(./assets/arr-prev.svg);
+  }
+  .swiper-button-prev {
+    left:5%;
+  }
+
+  .swiper-button-next {
+    right: 5%;
+  } 
+}
+
+.slide-block {
   position: relative;
 
   .slider-img {
@@ -17,6 +47,7 @@
     position: absolute;
     left: 4%;
     top: 46%;
+
   }
 
   .arr-next-img {
@@ -40,13 +71,21 @@
     transition: all 0.3s;
 
     &:hover {
-      background-color: #f0f0f0;
+      background: #E6E6E6;
+      color: #121212;
+      transition: all 0.3s;
+
+      .title,
+      .text {
+        color: #121212;
+      }
     }
 
     .title {
       font-weight: 600;
       line-height: 13px;
       color: #a0a0a0;
+
     }
 
     .text {
@@ -74,6 +113,9 @@
 @media all and (max-width: 590px) {
   .slider {
     .slider-block {
+      width: 490px;
+      height: 490px;
+
       .btn {
         .text {
           font-size: 16px;
