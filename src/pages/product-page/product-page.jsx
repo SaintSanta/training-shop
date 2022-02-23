@@ -23,6 +23,7 @@ import annotation from './assets/annotation.svg';
 
 import './product-page.scss';
 import ProductSwiper from '../../components/slider/swiper/swiperProduct';
+import ButtonProductTipe from './btnProductType/buttonProductTipe';
 
 export const ProductPage = ({ productType }) => {
   const { id } = useParams();
@@ -128,16 +129,7 @@ export const ProductPage = ({ productType }) => {
           </div>
         </div>
       </div>
-      <div className='products wrapper'>
-        <div className='products-title'>RELATED PRODUCTS</div>
-        <div className='products-cards'>
-          {CARDS_TEMPORARY['spec']
-            .filter((_, index) => index <= 3)
-            .map((cardItem) => (
-              <CardsItem card={cardItem} key={cardItem.id} />
-            ))}
-        </div>
-      </div>
+      <ButtonProductTipe productType={productType}/>
     </div>
   );
 };

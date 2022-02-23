@@ -23,8 +23,8 @@ const ButtonProductTipe = ({ productType }) => {
                 <div className='buttonTitle'>
                     <div className='productsTitle'>RELATED PRODUCTS</div>
                     <div className='buttons'>
-                        <img src={Next} alt="Next" className='but' onClick={setPrev} />
-                        <img src={Prev} alt="Prev" className='but' onClick={setNext} />
+                        <img src={Prev} alt="Next" className='but' onClick={setPrev} />
+                        <img src={Next} alt="Prev" className='but' onClick={setNext} />
                     </div>
                 </div>
 
