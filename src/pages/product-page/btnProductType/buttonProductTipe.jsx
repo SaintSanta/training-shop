@@ -18,11 +18,11 @@ const ButtonProductTipe = ({ productType }) => {
     const setNext = () => controlledSwiper.slideNext();
     const setPrev = () => controlledSwiper.slidePrev();
     return (
-        <div className='butonContener'>
+        <div className='buttonContainer'>
             <div className='wrapper'>
                 <div className='buttonTitle'>
                     <div className='productsTitle'>RELATED PRODUCTS</div>
-                    <div className='butons'>
+                    <div className='buttons'>
                         <img src={Next} alt="Next" className='but' onClick={setPrev} />
                         <img src={Prev} alt="Prev" className='but' onClick={setNext} />
                     </div>

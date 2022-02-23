@@ -54,15 +54,15 @@
     }
 }
 
-.sliderBlocItem {
+.sliderBlockItem {
     display: flex;
 
-    width: 448px;
+    width: 730px;
     height: 560px;
     height: max-content;
 }
 
-.sliderBlocTipe {
+.sliderBlockTipe {
     display: flex;
     width: 94px;
     overflow: visible;
@@ -100,7 +100,7 @@
 
 
 @media all and (max-width: 630px) {
-   .sliderBlocTipe {
+   .sliderBlockTipe {
        width: 100%;
        .swiper-wrapper {
          flex-direction: row;
@@ -112,7 +112,7 @@
        flex-wrap: wrap;
      }
     
-    .sliderBlocItem {    
+    .sliderBlockItem {    
         width: 100%;
         height: max-content;  
         .sliderImg{

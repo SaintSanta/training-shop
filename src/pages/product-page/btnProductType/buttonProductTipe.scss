@@ -1,4 +1,4 @@
-.butonContener {
+.buttonContainer {
     margin-top: 104px;
 
     .wrapper {
@@ -12,7 +12,7 @@
             display: flex;
             justify-content: space-between;
 
-            .butons {
+            .buttons {
                 display: flex;
                 column-gap: normal
             }
@@ -113,7 +113,7 @@
   }
 
 @media all and (max-width: 500px) {
-    .butonContener {
+    .buttonContainer {
         .wrapper {
             .buttonTitle {
                 .butons {

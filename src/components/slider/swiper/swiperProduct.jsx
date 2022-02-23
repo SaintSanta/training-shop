@@ -9,82 +9,80 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 // import required modules
-import {  Navigation, Thumbs,Controller,FreeMode } from "swiper";
+import { Navigation, Thumbs, Controller, FreeMode } from "swiper";
 
+import { arrTipeItem } from "../../../constants/ItemPages";
 
+import "./swiperProduct.scss";
 
-import { arrTipeItem } from '../../../constants/ItemPages';
+export const ProductSwiper = () => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [controlledSwiper, setControlledSwiper] = useState(null);
+  const setNext = () => controlledSwiper.slideNext();
+  const setPrev = () => controlledSwiper.slidePrev();
 
-import './swiperProduct.scss';
-
-export const ProductSwiper = () =>{
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    const [controlledSwiper, setControlledSwiper] = useState(null);
-    const setNext = () => controlledSwiper.slideNext();
-    const setPrev = () => controlledSwiper.slidePrev();
-
-    return(
-       <>
-         <div className='tipeItem'>
-          
-         <div className='sliderButtons'>
-          <div aria-hidden type='button' className='sliderButton upButton' onClick={setPrev} />
-          <div aria-hidden type='button' className='sliderButton downDutton' onClick={setNext} />
+  return (
+    <>
+      <div className="tipeItem">
+        <div className="sliderButtons">
+          <div
+            aria-hidden
+            type="button"
+            className="sliderButton upButton"
+            onClick={setPrev}
+          />
+          <div
+            aria-hidden
+            type="button"
+            className="sliderButton downDutton"
+            onClick={setNext}
+          />
         </div>
-          {
-           <Swiper
-      
-           onSwiper={setThumbsSwiper}
-           spaceBetween={10}
-           slidesPerView={4}
-           watchSlidesProgress
-           modules={[Navigation, Thumbs, Controller]}
-           className="sliderBlocTipe"
-           breakpoints={{
-          
-            640: {
-              width: 640,
-             
-            },
-         
-            768: {
-              width: 768,
-             
-            },
-          }}
-            >
+        {
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            spaceBetween={10}
+            slidesPerView={4}
+            watchSlidesProgress
+            modules={[Navigation, Thumbs, Controller]}
+            className="sliderBlockTipe"
+            breakpoints={{
+              640: {
+                width: 640,
+              },
 
-           {arrTipeItem.map((item) => (
-             <SwiperSlide key={item.id}  >
-             
-               <img src={item.imageSrc} alt='img'  className='sliderImgTipe' /> 
-             
-                       
-             </SwiperSlide>
-           ))}
-         </Swiper>
-          }
-     
-        </div>
+              768: {
+                width: 768,
+              },
+            }}
+          >
+            {arrTipeItem.map((item) => (
+              <SwiperSlide key={item.id}>
+                <img src={item.imageSrc} alt="img" className="sliderImgTipe" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        }
+      </div>
 
-         <Swiper 
-         data-test-id='product-slider'
-          onSwiper={setControlledSwiper}
-          modules={[FreeMode, Navigation, Thumbs, Controller]}
-          spaceBetween={10}
-             slidesPerView={1} 
-             navigation
-            thumbs={{ swiper: thumbsSwiper }}
-            className="sliderBlocItem"  
-              >
+      <Swiper
+        data-test-id="product-slider"
+        onSwiper={setControlledSwiper}
+        modules={[FreeMode, Navigation, Thumbs, Controller]}
+        spaceBetween={10}
+        slidesPerView={1}
+        navigation
+        thumbs={{ swiper: thumbsSwiper }}
+        className="sliderBlockItem"
+      >
         {arrTipeItem.map((item) => (
           <SwiperSlide key={item.id}>
-            <img src={item.imageSrc} alt='img' className='sliderImg' />          
+            <img src={item.imageSrc} alt="img" className="sliderImg" />
           </SwiperSlide>
         ))}
       </Swiper>
-       </>
-    );
-}
+    </>
+  );
+};
 
 export default ProductSwiper;
