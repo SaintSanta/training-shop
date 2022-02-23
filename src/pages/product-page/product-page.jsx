@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 import { ProductHeader } from '../../components/product-header';
 import { Rating } from '../../components/rating';
 import { CardsItem } from '../../components/cards-item/cards-item';
-import { ProductSlider } from '../../components/product-slider';
+
 import { Reviews } from '../../components/reviews';
 
 import { CARDS_TEMPORARY } from '../../constants/cards-temporary';
-import { SLIDER_PRODUCT_PAGE } from '../../constants/slider-product-page';
+
 import { CHECKOUT_IMG, RIGHT_IMG } from '../../constants/product-page';
 
 import hanger from './assets/hanger.svg';
@@ -22,6 +22,7 @@ import mail from './assets/mail.svg';
 import annotation from './assets/annotation.svg';
 
 import './product-page.scss';
+import ProductSwiper from '../../components/slider/swiper/swiperProduct';
 
 export const ProductPage = ({ productType }) => {
   const { id } = useParams();
@@ -35,7 +36,7 @@ export const ProductPage = ({ productType }) => {
     <div className='page-product' data-test-id={`product-page-${productType}`}>
       <ProductHeader productType={productType} name={card?.name} rating={card?.rating} />
       <div className='page-product-main wrapper'>
-        <ProductSlider array={SLIDER_PRODUCT_PAGE} />
+        <ProductSwiper />
         <div className='params'>
           <span>
             COLOR:<span className='bold'>Blue</span>
