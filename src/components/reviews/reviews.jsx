@@ -1,3 +1,4 @@
+import React from 'react';
 import { Rating } from '../rating';
 
 import { REVIEWS } from '../../constants/reviews';

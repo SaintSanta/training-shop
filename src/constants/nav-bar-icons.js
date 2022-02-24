@@ -1,7 +1,6 @@
 import iconSearch from '../components/header/nav-bar/assets/IconSearch.svg';
 import iconGlobe from '../components/header/nav-bar/assets/IconGlobe.svg';
 import iconUser from '../components/header/nav-bar/assets/IconUser.svg';
-import iconBasket from '../components/header/nav-bar/assets/IconBasket.svg';
 
 export const NAV_BAR_ICONS = [
   {
@@ -18,10 +17,5 @@ export const NAV_BAR_ICONS = [
       id: '3',
       name: 'User Account',
       imageSrc: iconUser,
-  },
-  {
-      id: '4',
-      name: 'Basket',
-      imageSrc: iconBasket,
   },
 ]

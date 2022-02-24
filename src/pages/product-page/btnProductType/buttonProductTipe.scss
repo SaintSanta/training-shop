@@ -1,0 +1,150 @@
+.buttonContainer {
+    margin-top: 104px;
+
+    .wrapper {
+
+.relatedSwiper{
+    max-width: 1110px;
+}
+
+
+        .buttonTitle {
+            display: flex;
+            justify-content: space-between;
+
+            .buttons {
+                display: flex;
+                column-gap: normal
+            }
+        }
+
+        .productsCards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+            gap: 30px;
+            margin: 28px 0;
+
+        }
+
+        .productButton {
+            width: 100%;
+            padding: 16px 0;
+            border: 2px solid #f8f8f8;
+            background: #f8f8f8;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 15px;
+            letter-spacing: 0.06em;
+            color: #404040;
+            cursor: pointer;
+
+            &:hover {
+                background: #E6E6E6;
+                color: #121212;
+                transition: all 0.3s;
+            }
+        }
+
+        .cardsItem {
+            position: relative;
+
+           
+            .cardsItemImg {
+                width: 100%;
+
+            }
+
+            .sale {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #e91e63;
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 13px;
+                padding: 8px;
+                z-index: 10;
+            }
+
+            .cardsItemName {
+                font-size: 14px;
+                line-height: 16px;
+                color: #707070;
+                padding: 14px 0;
+            }
+
+            .cardsItemPrice {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .productsTitle {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 25px;
+            letter-spacing: 0.06em;
+            padding-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .relatedSwiper{
+      width: 900px;
+    }
+  }
+
+  @media screen and (max-width: 940px) {
+    .relatedSwiper{
+      width: 700px;
+    }
+  }
+
+  @media screen and (max-width: 740px) {
+    .relatedSwiper{
+        width: 100%;
+
+    }
+  }
+
+@media all and (max-width: 500px) {
+    .buttonContainer {
+        .wrapper {
+            .buttonTitle {
+                .butons {
+                    .but {
+                     
+                        height: 80%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .relatedSwiper{
+      width: 300px;
+    }
+  }
+
+@media all and (max-width: 400px) {
+    .butonContener {
+        .wrapper {
+            .buttonTitle {
+                .butons {
+                    .but {                   
+                        height: 70%;
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { FOOTER_NAV } from '../../../constants/footer-nav';

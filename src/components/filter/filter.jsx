@@ -1,3 +1,4 @@
+import React from 'react';
 import { FilterItem } from './filter-item';
 
 import { FILTERS } from '../../constants/filter';
