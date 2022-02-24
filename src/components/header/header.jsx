@@ -9,6 +9,7 @@ import { HeaderIconsNav } from './nav-bar';
 import Logo from './assets/CleverShop.svg';
 
 import './header.scss';
+import BurgerMenu from './menu/burger-menu/burger-menu';
 
 export const Header = () => (
   <div className='header' data-test-id='header'>
@@ -25,6 +26,7 @@ export const Header = () => (
         </Link>
         <Menu />
         <HeaderIconsNav />
+        <BurgerMenu />
       </div>
     </div>
   </div>
