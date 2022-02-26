@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 import { ProductHeader } from '../../components/product-header';
 import { Rating } from '../../components/rating';
-import { CardsItem } from '../../components/cards-item/cards-item';
 
 import { Reviews } from '../../components/reviews';
 
