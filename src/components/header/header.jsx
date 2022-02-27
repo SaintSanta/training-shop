@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Contacts } from './contacts';
@@ -10,9 +10,17 @@ import Logo from './assets/CleverShop.svg';
 
 import './header.scss';
 import BurgerMenu from './menu/burger-menu/burger-menu';
+import BurgerBtn from './menu/burger-menu/hamburger-btn/burger-btn';
 
-export const Header = () => (
-  <div className='header' data-test-id='header'>
+export const Header = () => {
+  const [condition, setCondition] = useState(false);
+
+  function closeBurger(condition){
+    if(condition)
+    setCondition(false);
+  }
+  return (
+  <div className='header' data-test-id='header' onClick={() => closeBurger(condition)}>
     <div className='header-contacts'>
       <div className='wrapper'>
         <Contacts />
@@ -26,8 +34,10 @@ export const Header = () => (
         </Link>
         <Menu />
         <HeaderIconsNav />
-        <BurgerMenu />
+        <BurgerBtn condition={condition} setCondition={setCondition}/>
+        <BurgerMenu condition={condition} setCondition={setCondition}/>
       </div>
     </div>
   </div>
-);
+  );
+};
