@@ -19,10 +19,10 @@ function filterSeting(click){
   
     let Body =  document.body;
     if(click){           
-        Body.classList.add('lock');          
+        Body.classList.add('scrollLock');          
         return  <img src={cross} alt='filter' className='imgBurger close' />
     }else{           
-        Body.classList.remove("lock");      
+        Body.classList.remove('scrollLock');      
         return  <img src={list} alt='filter' className='imgBurger' />
     }
 }
